@@ -1,0 +1,21 @@
+1 Wireframing
+2 Defining structure of the whole web App
+3 Hooks :
+
+The data will change because, in our app, there will be user interaction triggered by the user selecting languages and themes.
+To display them properly on the screen, we will need to store them in the state variables.
+For that, we will use React’s built-in useState Hook, which is a standard way of handling this in the React ecosystem.
+
+There will be three stae variables :
+a input
+b themes
+c language select
+
+4 Components Creation :
+  a Dropdown
+  b Editor
+  c Highlighter
+
+  Dropdown  will have theme and language select
+
+5 Didn't pass theme and language value to state variables so it was showing first default value in the list
