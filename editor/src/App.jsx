@@ -7,16 +7,18 @@ import * as languages from "react-syntax-highlighter/dist/esm/languages/hljs";
 
 import './App.css';
 
-const defaultLanguage = <code>${"javascript" || Object.keys(languages).sort()[0]}</code>;
-const defaultTheme = <code>${"atomOneDark" || Object.keys(themes).sort()[0]}</code>;
+const defaultLanguage = "javascript" || Object.keys(languages).sort()[0];
+const defaultTheme = "atomOneDark" || Object.keys(themes).sort()[0];
+
 function App() {
 
   const [input, setInput] = useState("");
   const[theme,setTheme]  = useState(defaultTheme);
   const[language,setLanguage] = useState(defaultLanguage);
 
+
   return (
-    <>
+  
      <div className='App'>
       <div className='ControlsBox'> 
       <Dropdown
@@ -24,11 +26,13 @@ function App() {
           onChange={(e) => setLanguage(e.target.value)}
           data={languages}
         />
+        
         <Dropdown
           defaultTheme={defaultTheme}
           onChange={(e) => setTheme(e.target.value)}
           data={themes}
         />    
+       
        </div>
       <div className='PanelsBox'>
       <Editor
@@ -40,8 +44,8 @@ function App() {
         </Highlighter>
       </div>
      </div>
-    </>
-  )
+ 
+  );
 }
 
 export default App

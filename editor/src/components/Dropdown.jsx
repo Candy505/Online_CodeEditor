@@ -1,18 +1,21 @@
 import "./Dropdown.css";
 
-export const Dropdown = ({ defaultTheme, onChange, data }) => {
+export const Dropdown = ({ defaultLanguage ,defaultTheme, onChange, data }) => {
+    const defaultValue = defaultTheme ? defaultTheme : defaultLanguage;
   return (
-    <select className="select" defaultValue={defaultTheme} onChange={onChange}>
+    <div> 
+    <select className="select" defaultValue={defaultValue} onChange={onChange}>
       {Object.keys(data)
         .sort()
-        .map((theme, index) => {
+        .map((item, index) => {
           return (
-            <option key={index} value={theme}>
-              {theme}
+            <option key={index} value={item}>
+              {item}
             </option>
           );
         })}
     </select>
+</div>
   );
 };
 
