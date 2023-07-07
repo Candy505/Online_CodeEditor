@@ -19,3 +19,16 @@ c language select
   Dropdown  will have theme and language select
 
 5 Didn't pass theme and language value to state variables so it was showing first default value in the list
+
+6 const defaultLanguage = "javascript" || Object.keys(languages).sort()[0];
+const defaultTheme = "atomOneDark" || Object.keys(themes).sort()[0];
+ 
+ not jsx syntax but string syntax is accepted
+
+7  const defaultValue = defaultTheme ? defaultTheme : defaultLanguage;
+use of ternary operator to make a choice btwn props
+
+
+Resources : 
+
+https://blog.logrocket.com/building-react-code-editor-syntax-highlighter/
