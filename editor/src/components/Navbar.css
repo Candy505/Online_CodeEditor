@@ -1,13 +1,20 @@
+
 .nav{
-height: 12vh;
-width: 100vw;
-padding:  15px;
-margin: 0px;
-background-color: rgba(18, 63, 3, 0.498);
-text-align: center;
-color: rgb(252, 252, 252);
-font-size: larger;
+    height: 12vh;
+    width: 100vw;
+    padding:  15px;
+    margin: 0px;
+    background-color: rgba(18, 63, 3, 0.498);
+     color: rgb(252, 252, 252);
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
 }
+
+.logo{
+    margin: auto;
+    font-size: larger;
+    }
 
 #cactus{
     height: 6vh;

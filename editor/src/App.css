@@ -31,4 +31,6 @@
     margin-top: 20px;
   }
 
-  
+  .App.nav{
+    padding: 0px;
+  }

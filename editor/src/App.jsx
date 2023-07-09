@@ -5,11 +5,11 @@ import { Highlighter } from "./components/Highlighter";
 import * as themes from "react-syntax-highlighter/dist/esm/styles/hljs";
 import * as languages from "react-syntax-highlighter/dist/esm/languages/hljs";
 import Navbar from "./components/Navbar";
-
+import Sidebar from "./components/Sidebar";
 import './App.css';
 
 const defaultLanguage = "javascript" || Object.keys(languages).sort()[0];
-const defaultTheme = "atomOneDark" || Object.keys(themes).sort()[0];
+const defaultTheme = "solarizedDark" || Object.keys(themes).sort()[0];
 
 function App() {
 
@@ -25,6 +25,7 @@ function App() {
 
   return (
     <>
+
    <Navbar/>
      <div className='App'>
        
