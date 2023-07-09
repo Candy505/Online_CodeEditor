@@ -32,3 +32,4 @@ use of ternary operator to make a choice btwn props
 Resources : 
 
 https://blog.logrocket.com/building-react-code-editor-syntax-highlighter/
+rgba(48, 1, 59, 0.511);
