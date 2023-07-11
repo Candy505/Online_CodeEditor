@@ -1,0 +1,26 @@
+.menu {
+    position:absolute;
+    top: 2px;
+    left: 0;
+    background-color: rgba(18, 19, 18, 0.961);
+    padding: 10px;
+    border: 1px solid rgb(23, 22, 22);
+    height: 100vh;
+    margin-top: 0px;
+  }
+  
+.menu li {
+    list-style-type: none;
+    margin: 5px 0;
+    padding-bottom: 20px;
+  }
+  
+.menu li a
+  {
+    color: rgb(242, 240, 240);
+    text-decoration: none;
+  }
+
+
+  /* Additional styles for the icon */
+  

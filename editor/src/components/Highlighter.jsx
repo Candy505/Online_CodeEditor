@@ -1,23 +1,23 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
 import "./Highlighter.css";
 
-export const Highlighter = ({ language, theme, children }) => {
+export const Highlighter = ({lineno, language, theme, children }) => {
   const indentedCode = indentCode(children);
 
   return (
     <SyntaxHighlighter
+    showLineNumbers="true"
       language={language}
       style={theme}
       className="highlighter"
     >
+      
       {indentedCode}
     </SyntaxHighlighter>
   );
 };
 
-
 function indentCode(code) {
- 
   const lines = code.split('\n');
   let indentedCode = '';
 
@@ -34,12 +34,13 @@ function indentCode(code) {
     indentedCode += ' '.repeat(indentLevel * indentSize) + line + '\n';
 
     if (line.endsWith('{')) {
+      
       indentLevel++;
     }
   }
 
-  return indentedCode.trim(); 
-  // Add indentation logic for other languages if needed
+  //console.log(indentedCode)
+  return indentedCode.trim();
 
-  return code;
+  // Add indentation logic for other languages if needed
 }

@@ -13,26 +13,42 @@ const defaultTheme = "solarizedDark" || Object.keys(themes).sort()[0];
 
 function App() {
 
+
+
+  
   const [input, setInput] = useState("");
   const[theme,setTheme]  = useState(defaultTheme);
   const[language,setLanguage] = useState(defaultLanguage);
- 
+  const [lineNo, setlineNo] = useState(0);
   function handleChange(e)
   {
     setLanguage(e.target.value);
     setInput('');
   }
 
+
+  function handleInput(e)
+  {
+    setInput(e.target.value);
+
+  }
+
+  function handleLine(e)
+  {
+    
+    if(e.keyCode === 13)
+   { setlineNo(lineNo+1);}
+  }
+
+
   return (
     <>
-
-   <Navbar/>
-     <div className='App'>
        
+      <Navbar/>
+     <div className='App'>  
 
-<div className='ControlsBox'> 
-     
-
+  <div className='ControlsBox'> 
+  
       <Dropdown
           defaultLanguage={defaultLanguage}
           onChange={(e) => handleChange(e)}
@@ -46,16 +62,20 @@ function App() {
         />    
        
        </div>
+
+
       <div className='PanelsBox'>
       <Editor
           placeHolder="Type your code here..."
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <Highlighter language={language} theme={themes[theme]}>
+          onChange={(e) => handleInput(e)}
+          onKeyDown= {(e) => handleLine(e)}
+      />
+
+        <Highlighter showlineNumbers={lineNo}language={language} theme={themes[theme]}>
           {input}
         </Highlighter>
       </div>
-     
+    
      </div>
  </>
   );
