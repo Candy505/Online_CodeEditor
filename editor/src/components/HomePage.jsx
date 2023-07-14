@@ -7,7 +7,7 @@ import * as languages from "react-syntax-highlighter/dist/esm/languages/hljs";
 
 
 const defaultLanguage = "javascript" || Object.keys(languages).sort()[0];
-const defaultTheme = "solarizedDark" || Object.keys(themes).sort()[0];
+const defaultTheme = "obsidian" || Object.keys(themes).sort()[0];
 
 
 function HomePage()

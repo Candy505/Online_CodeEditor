@@ -2,13 +2,14 @@
   .heading {
     font-size: 15px;
     margin: 15px;
+    color: #f5efef;
   }
 
 
 
   #source {
     width: 50vw;
-    background: #cacb7b52;
+    background: #c3f1c9ce;
     height: 60vh;
     font-size: 15px;
     resize: vertical;
@@ -18,7 +19,7 @@
 
   
   .input {
-    background: #cccccc52;
+    background: #efefeaeb;
     width: 45.6%;
     height: 17vh;
     resize: vertical;
@@ -27,7 +28,7 @@
   }
 
   #output {
-     background: #cacb7b52;
+    background: #c3f1c9ce;
      margin-top: 70px;
      height: 50vh;
      width: 30vw;
@@ -40,9 +41,9 @@
     }
 
   .run{
-    border: 3px solid rgba(180, 192, 18, 0.45);
+    border: 3px solid rgba(255, 255, 255, 0.45);
     border-radius: 6px;
-    background-color: rgba(239, 234, 244, 0.395);
+    background: #efefeaeb;
     padding: 5px;
     width: 50px;
     height: 40px;
@@ -53,9 +54,9 @@
     
     .btn , select option , select{
     height: 30px;
-    border: 3px solid rgba(180, 192, 18, 0.45);
+    border: 3px solid rgba(246, 247, 242, 0.45);
     border-radius: 6px;
-    background-color: rgba(231, 227, 234, 0.395);
+    background: #efefeaeb;
     
 }
 .btn{
@@ -72,5 +73,5 @@
   /* Scaling button to 0.98 to its original size */
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   /* Lowering the shadow */
-  background-color:rgba(82, 165, 82, 0.459);
+  background-color:rgba(30, 9, 188, 0.482);
 }

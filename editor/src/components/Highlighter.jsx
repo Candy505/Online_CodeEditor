@@ -5,12 +5,39 @@ import CodeFormatBtn from "./CodeFormatBtn";
 import { format } from 'prettier';
 export const Highlighter = ({ language, theme, children }) => {
   
+  const indentedCode = indentCode(children);
 
-  let indentedCode = null;
-  function indentCode() {
-     console.log("hey")
+  function indentCode(code) {
+    // Add closing braces and indentation
+    const lines = code.split("\n");
+    let indentationLevel = 0;
+    const indentedLines = lines.map((line) => {
+      const trimmedLine = line.trim();
+      if (trimmedLine.endsWith("{")) {
+        const indentedLine = "  ".repeat(indentationLevel) + trimmedLine;
+        indentationLevel++;
+        return indentedLine;
+      } else if (trimmedLine.endsWith("}")) {
+        indentationLevel--;
+        const indentedLine = "  ".repeat(indentationLevel) + trimmedLine;
+        return indentedLine;
+      } else {
+        return "  ".repeat(indentationLevel) + line;
+      }
+    });
+    const indentedCode = indentedLines.join("\n");
+  
+    // Log the modified code for demonstration purposes
+    return indentedCode;
   }
+  /*const indentedCode = indentCode(); let indentCode =null;
+  function indentCode() {
+    const codeWithClosingBraces = children.replace(/{/g, "{\n  \n}");
 
+    // Log the modified code for demonstration purposes
+    console.log(codeWithClosingBraces)
+  }
+*/
   return (
     <div>
 
@@ -21,7 +48,7 @@ export const Highlighter = ({ language, theme, children }) => {
       style={theme}
       className="highlighter"
     >
-     {indentedCode||children}
+     {indentedCode}
     </SyntaxHighlighter>
     </div>
   );
