@@ -36,15 +36,17 @@ export const Editor = ({ language, placeHolder, onChange, onKeyDown }) => {
   const [suggestions, setSuggestions] = useState([]);
 
   const handleInputChange = (event) => {
+
     const value = event.target.value;
     setInputValue(value);
+
     const language = lang;
    // Replace with the selected programming language
     const keywords = languageKeywords[language] || [];
     const words = value.split(/\s+/);
-    const matchedKeywords = words.flatMap((word) =>
-      keywords.filter((keyword) => keyword.startsWith(word))
-    );
+    const matchedKeywords = keywords.filter((keyword) =>
+  words.some((word) => keyword.startsWith(word))
+);
 
     setSuggestions(matchedKeywords);
   };

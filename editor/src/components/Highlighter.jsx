@@ -1,23 +1,35 @@
+import prettier from 'prettier'
 import SyntaxHighlighter from "react-syntax-highlighter";
 import "./Highlighter.css";
+import CodeFormatBtn from "./CodeFormatBtn";
+import { format } from 'prettier';
+export const Highlighter = ({ language, theme, children }) => {
+  
 
-export const Highlighter = ({lineno, language, theme, children }) => {
-  const indentedCode = indentCode(children);
+  let indentedCode = null;
+  function indentCode() {
+     console.log("hey")
+  }
 
   return (
+    <div>
+
+    
     <SyntaxHighlighter
     showLineNumbers="true"
       language={language}
       style={theme}
       className="highlighter"
     >
-      
-      {indentedCode}
+     {indentedCode||children}
     </SyntaxHighlighter>
+    </div>
   );
 };
 
-function indentCode(code) {
+
+  
+  /*
   const lines = code.split('\n');
   let indentedCode = '';
 
@@ -43,4 +55,6 @@ function indentCode(code) {
   return indentedCode.trim();
 
   // Add indentation logic for other languages if needed
-}
+  */
+
+  
