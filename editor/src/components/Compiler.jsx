@@ -40,7 +40,7 @@ export default class Compiler extends Component {
         method: "POST",
         headers: {
           "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-          "x-rapidapi-key": "", // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
+          "x-rapidapi-key": '', // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
           "content-type": "application/json",
           accept: "application/json",
         },
@@ -71,7 +71,7 @@ export default class Compiler extends Component {
           method: "GET",
           headers: {
             "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-            "x-rapidapi-key": "", // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
+            "x-rapidapi-key": '', // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
             "content-type": "application/json",
           },
         });
@@ -121,9 +121,12 @@ export default class Compiler extends Component {
               <option value="50">C</option>
               <option value="62">Java</option>
               <option value="71">Python</option>
+              <option value="63">Javascript</option>
             </select>
             <button className="btn clr position">Format code</button>
             <button className="btn clr position">Syntax Highlight</button>
+ <textarea placeholder= "Input field..... " id="input" onChange={this.userInput}></textarea>
+          
       <div className="vertical">
           <div >
             <label htmlFor="solution "></label>
@@ -139,10 +142,14 @@ export default class Compiler extends Component {
 
           </div>
 
-         
+          <div>
+          
+
+        </div>
 
             <div>
-              <textarea placeholder="  Output will show here.." id="output"></textarea>
+           
+              <textarea placeholder="Output will show here.." id="output"></textarea>
             </div>
 
         </div>

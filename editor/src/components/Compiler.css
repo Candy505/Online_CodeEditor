@@ -18,27 +18,25 @@
   }
 
   
-  .input {
-    background: #efefeaeb;
-    width: 45.6%;
-    height: 17vh;
-    resize: vertical;
-    font-size: 17px;
+  #input {
+    background: #c3f1c9ce;
+    width: 29%;
+    overflow: scroll;
+    margin-left: 180px;
+    margin-top: 10px;
+    height: 80px;
    
   }
 
   #output {
     background: #c3f1c9ce;
-     margin-top: 70px;
-     height: 50vh;
-     width: 30vw;
+     margin-right:12px;
+     height: 70vh;
+     width: 29vw;
   }
  
 
 
-    .position{
-      margin: 20px 0px 5px ;
-    }
 
   .run{
     border: 3px solid rgba(255, 255, 255, 0.45);
@@ -73,5 +71,6 @@
   /* Scaling button to 0.98 to its original size */
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   /* Lowering the shadow */
-  background-color:rgba(30, 9, 188, 0.482);
+  background-color:rgb(241, 241, 241);
 }
+

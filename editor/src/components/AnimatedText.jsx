@@ -4,9 +4,14 @@ import style from "react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark";
 const AnimatedText = ({ text, speed,infinite}) => {
 
     const styles = {
-        color: "green",
-        fontSize: "76px",
-        margin:"30px",
+      color: "#7cb777",
+      backgroundColor: "white",
+      margin:"30px",
+        fontSize: "56px",
+        marginLeft:"260px",
+        opacity:"0.8",
+        padding:"10px",
+        
       };
 
       

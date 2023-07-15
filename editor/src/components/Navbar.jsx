@@ -47,12 +47,6 @@ function Navbar() {
     <li>
       <a href="#">Live Share (Coming Soon)</a>
       </li>
-      <li>
-      <a href="#" >Copy Code <img className = "icons" 
-      alt = "github" 
-      src = "https://cdn-icons-png.flaticon.com/128/10419/10419629.png"img/></a>
-    </li>
-      
   </ul>
  
    )
@@ -74,3 +68,11 @@ function Navbar() {
 
 
 export default Navbar
+
+
+/*   <li>
+      <a href="#" >Copy Code <img className = "icons" 
+      alt = "github" 
+      src = "https://cdn-icons-png.flaticon.com/128/10419/10419629.png"img/></a>
+    </li>
+      */

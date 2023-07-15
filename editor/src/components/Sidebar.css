@@ -2,10 +2,10 @@
     position:absolute;
     top: 2px;
     left: 0;
-    background-color: rgba(18, 19, 18, 0.961);
+    background-color: rgba(189, 40, 40, 0.961);
     padding: 35px;
     border: 1px solid rgb(23, 22, 22);
-    height: 100vh;
+    height: 98vh;
     margin-top: 0px;
   }
   
@@ -17,7 +17,8 @@
   
 .menu li a
   {
-    color: rgb(242, 240, 240);
+  
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
 
